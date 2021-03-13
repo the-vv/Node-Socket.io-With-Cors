@@ -7,7 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('server:server');
 var http = require('http');
-let socketapi = require("../websocket"); // <== Add this line
+let socketapi = require("../websocket");
 
 /**
  * Get port from environment and store in Express.
@@ -26,7 +26,7 @@ socketapi.io.attach(server, {
       origin: "http://localhost:4200",
       methods: ["GET", "POST"]
   }
-}); // <== Also add this line
+});
 
 /**
  * Listen on provided port, on all network interfaces.
